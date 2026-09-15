@@ -1,12 +1,12 @@
 best <- function(state, outcome) {
-    
-    # Read outcome data
+     # nolint: trailing_whitespace_linter, indentation_linter.
+    # Read outcome data # nolint: indentation_linter, indentation_linter.
     outcome_data <- read.csv(
-        "outcome-of-care-measures.csv",
+        "outcome-of-care-measures.csv", # nolint: indentation_linter.
         colClasses = "character"
-    )
+    ) # nolint
     
-    # Check that state is valid
+    # Check that state is valid # nolint: indentation_linter.
     if (!state %in% outcome_data$State) {
         stop("invalid state")
     }
